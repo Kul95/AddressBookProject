@@ -1,6 +1,8 @@
 package com.Bridglabz.AddressBookProject;
 
+import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Map;
 import java.util.Scanner;
 
 public class AddressBook1 {
@@ -117,10 +119,22 @@ public class AddressBook1 {
     public void searchPersonCityOrState(){
         System.out.println("Enter the name of City or State : ");
         String cityOrState=sc.nextLine();
-        set
-                .stream()
+        set.stream()
                 .filter(contacts -> contacts.getCity().equals(cityOrState)||contacts.getState().equals(cityOrState))
                 .forEach(System.out::println);
 
+    }
+
+    public void ViewPersonCityOrState(){
+        System.out.println("Enter the name of City or State : ");
+        String cityOrState=sc.nextLine();
+       if(map.containsKey(cityOrState)){
+           System.out.println("Enter the state: ");
+           String state=sc.nextLine();
+           Contacts addressBook=map.get(cityOrState);
+           System.out.println("Enter the name: ");
+           String name=sc.nextLine();
+           addressBook.setFirstName(name);
+       }
     }
 }
