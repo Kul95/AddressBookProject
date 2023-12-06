@@ -35,7 +35,8 @@ public class AddressBook {
                                 + "\n3.Update Contact details"
                                 + "\n4. Delete Contact details"
                                 + "\n5. Add multiple Contact in addressBook"
-                                + "\n6. Exit ");
+                                + "\n6. Exit " +
+                                "\n7. View City Or State.");
                         System.out.println("Enter the choice! :");
                         int choice = sc.nextInt();
 
@@ -70,6 +71,10 @@ public class AddressBook {
                             default:
                                 System.out.println("Please enter valid choice: ");
                                 break;
+                            case 7:
+                                System.out.println("View Contact City or State..");
+                                addressBook1.ViewPersonCityOrState();
+                                break;
                         }
                     }
                     while (isOrdering);
@@ -82,7 +87,8 @@ public class AddressBook {
                             + "\n3.Update Contact details"
                             + "\n4. Delete Contact details"
                             + "\n5. Add multiple Contact in addressBook"
-                            + "\n6. Exit ");
+                            + "\n6. Exit" +
+                            "\n7 City or State ");
                     System.out.println("Enter the choice! :");
                     int choice1 = sc.nextInt();
                     // Switch Cases..........
@@ -90,35 +96,39 @@ public class AddressBook {
                         //Add contacts...
                         case 1:
                             System.out.println("Add Contacts: ");
-                            addressBook1.addContact();
+                            addressBook2.addContact();
                             break;
                         // View Contact details....
                         case 2:
                             System.out.println("View Contact details....");
-                            addressBook1.display();
+                            addressBook2.display();
                             break;
                         // Update Contacts.....
                         case 3:
                             System.out.println("Update Contacts: ");
-                            addressBook1.updateContacts();
+                            addressBook2.updateContacts();
                             break;
                         // Delete Contacts....
                         case 4:
                             System.out.println("Delete Contacts: ");
-                            addressBook1.deleteContacts();
+                            addressBook2.deleteContacts();
                             break;
                         // Exit from program
                         case 5:
                             System.out.println("Ability to add multiple AddressBook..");
-                            addressBook1.addMultipleContacts();
+                            addressBook2.addMultipleContacts();
                             break;
                         case 6:
                         default:
                             System.out.println("Please enter valid choice: ");
                             break;
+                        case 7:
+                            System.out.println("View Contact City or State..");
+                            addressBook2.ViewPersonCityOrState();
+                            break;
                     }
             }
-            while (isOrdering1) ;
+            while (isOrdering1);
         } while (ordering);
     }
 }
