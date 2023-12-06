@@ -36,7 +36,8 @@ public class AddressBook {
                                 + "\n4. Delete Contact details"
                                 + "\n5. Add multiple Contact in addressBook"
                                 + "\n6. Exit " +
-                                "\n7. View City Or State.");
+                                "\n7. View City Or State." +
+                                "\n8 Count contact by city or state.");
                         System.out.println("Enter the choice! :");
                         int choice = sc.nextInt();
 
@@ -75,6 +76,9 @@ public class AddressBook {
                                 System.out.println("View Contact City or State..");
                                 addressBook1.ViewPersonCityOrState();
                                 break;
+                            case 8:
+                                System.out.println("Count contact by city or State..");
+                                addressBook1.getNumberOfContactCountByCityOrState();
                         }
                     }
                     while (isOrdering);
@@ -88,7 +92,8 @@ public class AddressBook {
                             + "\n4. Delete Contact details"
                             + "\n5. Add multiple Contact in addressBook"
                             + "\n6. Exit" +
-                            "\n7 City or State ");
+                            "\n7 City or State " +
+                            "\n8 Count Contacts by city or state.");
                     System.out.println("Enter the choice! :");
                     int choice1 = sc.nextInt();
                     // Switch Cases..........
@@ -126,9 +131,13 @@ public class AddressBook {
                             System.out.println("View Contact City or State..");
                             addressBook2.ViewPersonCityOrState();
                             break;
+                        case 8:
+                            System.out.println("Count contact city or state..");
+                            addressBook2.getNumberOfContactCountByCityOrState();
+                            break;
                     }
             }
-            while (isOrdering1);
+            while (isOrdering1) ;
         } while (ordering);
     }
 }
