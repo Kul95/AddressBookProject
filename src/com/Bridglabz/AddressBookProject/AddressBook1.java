@@ -138,4 +138,11 @@ public class AddressBook1 {
            addressBook.setFirstName(name);
        }
     }
+    public void getNumberOfContactCountByCityOrState(){
+        System.out.println("Enter the name of City or State name: ");
+        String cityOrState=sc.nextLine();
+        System.out.println("Number of contact from the following: "+cityOrState);
+        System.out.println(       set.stream()
+                .filter(contacts -> contacts.getCity().equals(cityOrState)||contacts.getState().equals(cityOrState)).count());
+    }
 }
