@@ -6,6 +6,7 @@ import java.util.Map;
 import java.util.Scanner;
 
 public class AddressBook1 {
+    Map<String,Contacts>map=new HashMap<>();
     HashSet<Contacts> set = new HashSet<>();
     Scanner sc = new Scanner(System.in);
 
